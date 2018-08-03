@@ -1,9 +1,6 @@
 class TodosController < ApplicationController
   before_action :set_todo, only: [:show, :update, :destroy]
 
-  include Response
-  include ExceptionHandler
-
   # GET /todos
   def index
     @todos = Todo.all
